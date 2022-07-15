@@ -50,16 +50,16 @@ Partial Class Form1
         '
         Me.Button2.Location = New System.Drawing.Point(373, 112)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(149, 23)
+        Me.Button2.Size = New System.Drawing.Size(211, 23)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Clique aqui para o resultado!"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(373, 83)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(149, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(211, 23)
         Me.TextBox1.TabIndex = 3
         '
         'Form1
