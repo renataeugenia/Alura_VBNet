@@ -40,31 +40,18 @@
 
 
 
-        If (idade >= 18) Then
+        If (idade >= 18) Or (acompanhante = "S" And idade >= 16) Then
             TextBox2.Text = "Entrada liberada!"
 
         Else
 
-            If acompanhante = "S" And idade >= 16 Then
+            If (acompanhante = "N" And idade >= 16) Or (idade < 16) Then
 
-                TextBox2.Text = "Entrada liberada! voce tem entre 16 e 18 anos e esta acompanhado de uma pessoa maior de idade!"
-
-            Else
-
-
-                If acompanhante = "N" And idade >= 16 Then
-
-                    TextBox2.Text = "Entrada negada! voce tem entre 16 e 18 anos, mas não esta acompanhado de uma pessoa maior de idade!"
-
-                Else
-                    TextBox2.Text = "Entrada negada! voce é menor de idade!"
-
-                End If
+                TextBox2.Text = "Entrada negada!"
 
             End If
 
         End If
-
 
 
 
