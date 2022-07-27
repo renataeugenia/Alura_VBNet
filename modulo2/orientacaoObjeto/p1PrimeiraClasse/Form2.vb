@@ -12,12 +12,24 @@
 
 
         Label2.Text = "Saldo Atual"
-        Label3.Text = "Valor do Saque"
+        Label3.Text = "Valor do Saque/Depósito"
         Button1.Text = "Efetuar Saque"
         Label4.Text = "Mensagem"
         Label5.Text = "Novo Saldo"
         GroupBox1.Text = "C/c"
-        GroupBox2.Text = "C/c Saque"
+        GroupBox2.Text = "C/c: Status Transação"
+        Button2.Text = "Efetuar Depósito"
+        GroupBox3.Text = "Extrato"
+
+        TextBox1.ReadOnly = True
+        TextBox2.ReadOnly = True
+        TextBox4.ReadOnly = True
+        TextBox5.ReadOnly = True
+        TextBox6.ReadOnly = True
+
+
+
+
 
         'inicializar os dados da classe
         ContaCorrente1.Titular = "Renata Eugênia"
@@ -50,8 +62,27 @@
         Else
             TextBox4.Text = "Saque efetuado com sucesso!"
             TextBox5.Text = ($"{ContaCorrente1.Saldo}")
+            TextBox2.Text = TextBox5.Text
+            ContaCorrente1.Extrato += Now.ToString + " Saque de R$  " + valor.ToString + " Saldo de R$  " + ContaCorrente1.Saldo.ToString + vbCrLf
+            TextBox6.Text = ContaCorrente1.Extrato
 
         End If
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+
+        Dim valorDeposito As Double = Val(TextBox3.Text)
+        ContaCorrente1.Depositar(valorDeposito)
+
+        TextBox4.Text = "Depósito efetuado com sucesso!"
+        TextBox5.Text = ($"{ContaCorrente1.Saldo}")
+        TextBox2.Text = TextBox5.Text
+        ContaCorrente1.Extrato += Now.ToString + " Depósito de R$  " + valorDeposito.ToString + " Saldo de R$  " + ContaCorrente1.Saldo.ToString + vbCrLf
+        TextBox6.Text = ContaCorrente1.Extrato
 
 
     End Sub

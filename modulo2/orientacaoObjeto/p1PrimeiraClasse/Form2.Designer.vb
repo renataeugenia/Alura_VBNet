@@ -35,8 +35,12 @@ Partial Class Form2
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -52,7 +56,7 @@ Partial Class Form2
         '
         Me.TextBox1.Location = New System.Drawing.Point(12, 57)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(383, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(416, 23)
         Me.TextBox1.TabIndex = 1
         '
         'Label2
@@ -89,9 +93,9 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(251, 150)
+        Me.Button1.Location = New System.Drawing.Point(251, 139)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(177, 53)
+        Me.Button1.Size = New System.Drawing.Size(177, 34)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
@@ -154,11 +158,41 @@ Partial Class Form2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "GroupBox2"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(251, 188)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(177, 32)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.TextBox6)
+        Me.GroupBox3.Location = New System.Drawing.Point(495, 57)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(382, 365)
+        Me.GroupBox3.TabIndex = 14
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "GroupBox3"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(6, 29)
+        Me.TextBox6.Multiline = True
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox6.Size = New System.Drawing.Size(370, 330)
+        Me.TextBox6.TabIndex = 0
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(440, 434)
+        Me.ClientSize = New System.Drawing.Size(909, 434)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
@@ -170,6 +204,8 @@ Partial Class Form2
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,4 +224,7 @@ Partial Class Form2
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents TextBox6 As TextBox
 End Class
